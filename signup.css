@@ -1,138 +1,26 @@
-@keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+@keyframes fadeIn{
+0%{opacity:0}
+100%{opacity:1}
 }
-
-body {
-  background-color: #071014;
-  background-image: -webkit-linear-gradient(160deg, #071014 0%, #0db8de 100%);
-  background-image: -moz-linear-gradient(160deg, #071014 0%, #0db8de 100%);
-  background-image: -o-linear-gradient(160deg, #071014 0%, #0db8de 100%);
-  background-image: linear-gradient(160deg, #071014 0%, #0db8de 100%);  
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    animation: fadeIn 0.5s ease-in;
+body{background-color:#071014;background-image:-webkit-linear-gradient(160deg,#071014 0,#0db8de 100%);background-image:-moz-linear-gradient(160deg,#071014 0,#0db8de 100%);background-image:-o-linear-gradient(160deg,#071014 0,#0db8de 100%);background-image:linear-gradient(160deg,#071014 0,#0db8de 100%);font-family:Arial,sans-serif;height:100vh;animation:fadeIn .5s ease-in}
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
 }
-
-@keyframes fadeUp {
-  from {
-      opacity: 0;
-      transform: translateY(30px); /* Hreyfum textann niður áður en hann hverfur. */
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0); /* Síðan hreyfum textann upp og hann verður sýnilegur. */
-  }
-}
-
-.login-box {
-    margin-top: 75px;
-    background: #1A2226;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 15px;
-    animation: fadeUp 0.5s ease-in;
-}
-.login-title {
-    text-align: center;
-    font-size: 30px;
-    letter-spacing: 2px;
-    margin-top: 35px;
-    font-weight: bold;
-    color: #0DB8DE;
-}
-.login-form {
-    margin-top: 25px;
-    text-align: left;
-}
-input[type=text] {
-    background-color: #1A2226;
-    border: none;
-    border-bottom: 2px solid #0DB8DE;
-    border-top: 0px;
-    border-radius: 0px;
-    outline: 0;
-    margin-bottom: 20px;
-    padding-left: 0px;
-    color: #ECF0F5;
-}
-input[type=password] {
-    background-color: #1A2226;
-    border: none;
-    border-bottom: 2px solid #0DB8DE;
-    border-radius: 0px;
-    margin-bottom: 20px;
-    color: #ECF0F5;
-}
-.form-group {
-margin: 30px;
-}
-.form-control:focus {
-    box-shadow: none;
-    background-color: #1A2226;
-    color: #ECF0F5;
-}
-.form-control-label {
-    font-size: 15px;
-    color: #6C6C6C;
-    letter-spacing: 1px;
-}
-.btn-outline-primary {
-  width: 200px;
-  height: 50px;
-  border-radius: 15px;
-  cursor: pointer;
-  border-color:#0DB8DE!important;
-  color:#0DB8DE;
-  margin-top: 30px;
-}
-.btn-outline-primary:hover{
-  background-color: #071014!important;
-  background-image: -webkit-linear-gradient(160deg, #071014 0%, #0db8de 100%)!important;
-  background-image: -moz-linear-gradient(160deg, #071014 0%, #0db8de 100%)!important;
-  background-image: -o-linear-gradient(160deg, #071014 0%, #0db8de 100%)!important;
-  background-image: linear-gradient(160deg, #071014 0%, #0db8de 100%)!important;
-  
-  color: #ffffff!important;
-}
-.login-button {
-    padding-right: 0px;
-    text-align: right;
-    margin-bottom: 25px;
-}
-.login-text {
-    padding-left: 0px;
-    color: #A2A4A4;
-}
-
-.message {
-  margin: 15px 0 0;
-  margin-left: 150px;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.message a {
-  color: #289bb8;
-  text-decoration: none;
-}
-
-
-/* Hide the scrollbar track */
-::-webkit-scrollbar {
-  width: 10px; /* Adjust the width as needed */
-}
-
-/* Style the scrollbar thumb (the draggable part) */
-::-webkit-scrollbar-thumb {
-  background: transparent; /* Set the thumb color to transparent */
-  border-radius: 5px; /* Add rounded corners if desired */
-}
-
-/* Style the scrollbar track when hovered */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.2); /* Change the background on hover */
-}
+.login-box{margin-top:75px;background:#1a2226;text-align:center;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);border-radius:15px;animation:fadeUp .5s ease-in}
+.login-title{text-align:center;font-size:30px;letter-spacing:2px;margin-top:35px;font-weight:700;color:#0db8de}
+.login-form{margin-top:25px;text-align:left}
+input[type=text]{background-color:#1a2226;border:none;border-bottom:2px solid #0db8de;border-top:0;border-radius:0;outline:0;margin-bottom:20px;padding-left:0;color:#ecf0f5}
+input[type=password]{background-color:#1a2226;border:none;border-bottom:2px solid #0db8de;border-radius:0;margin-bottom:20px;color:#ecf0f5}
+.form-group{margin:30px}
+.form-control:focus{box-shadow:none;background-color:#1a2226;color:#ecf0f5}
+.form-control-label{font-size:15px;color:#6c6c6c;letter-spacing:1px}
+.btn-outline-primary{width:200px;height:50px;border-radius:15px;cursor:pointer;border-color:#0db8de!important;color:#0db8de;margin-top:30px}
+.btn-outline-primary:hover{background-color:#071014!important;background-image:-webkit-linear-gradient(160deg,#071014 0,#0db8de 100%)!important;background-image:-moz-linear-gradient(160deg,#071014 0,#0db8de 100%)!important;background-image:-o-linear-gradient(160deg,#071014 0,#0db8de 100%)!important;background-image:linear-gradient(160deg,#071014 0,#0db8de 100%)!important;color:#fff!important}
+.login-button{padding-right:0;text-align:right;margin-bottom:25px}
+.login-text{padding-left:0;color:#a2a4a4}
+.message{margin:15px 0 0;margin-left:150px;color:#b3b3b3;font-size:12px}
+.message a{color:#289bb8;text-decoration:none}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-thumb{background:0 0;border-radius:5px}
+::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.2)}
