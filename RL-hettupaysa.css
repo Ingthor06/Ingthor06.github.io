@@ -1,0 +1,518 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 0.7s ease-in;
+}
+
+/* Initial state - the content is invisible */
+
+
+/* Animation to fade in the content */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.9); /* Hreyfum textann upp áður en hann hverfur. */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Síðan hreyfum textann niður og hann hverfur. */
+    }
+}
+
+.announcement-bar {
+    background-color: #110f2f;
+    color: #fff;
+    text-align: center;
+    padding: 4.5px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    animation: fadeDown 0.3s ease-in forwards; /* Bætum við "fade-down" innslætti með þessari animation. */
+}
+
+.announcement-bar .wrapper {
+    display: flex;
+    flex-direction: row; /* Láréttur staðsetning á icon-um */
+    gap: 50px; /* Stýrir bilinu milli icon-anna ef þú vilt stilla það */
+    margin-left: 50px;
+}
+
+.announcement-bar p {
+    margin-left: 400px; /* Stýrir bilinu milli icon-anna og paragraph-inns ef þú vilt stilla það */
+}
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.9);  /* Hreyfum textann upp áður en hann hverfur. */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Síðan hreyfum textann niður og hann hverfur. */
+    }
+}
+
+/* Upprunalegur kóði fyrir header */
+header {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Space out the content horizontally */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+    animation: fadeDown 0.4s ease-in forwards; /* Bætum við "fade-down" innslætti með þessari animation. */
+}
+
+/* Logo styles */
+.logo {
+    text-align: center;
+
+}
+
+.logo img {
+    max-width: 130px; /* Adjust the size of your logo as needed */
+}
+
+/* Video container styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1550px;
+    overflow: hidden;
+    height: 550px; /* Adjust the height for your video */
+    margin-top: 20px;
+
+    /* Adjust the video size as needed */
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Use object-fit to crop and make it responsive */
+    }
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+/* Add styles for the user dropdown */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px; /* Adjust the spacing as needed */
+    
+}
+
+.user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2f345c;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    
+}
+
+.user-dropdown .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family:'Cinzel', serif;
+}
+
+.user-dropdown .dropdown-content a:hover {
+    background-color: #2a4d7e;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Other existing styles remain the same */
+.right-menu {
+    display: flex;
+}
+
+.right-menu a {
+    text-decoration: none;
+    background-color: #2f345c;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.right-menu a:hover {
+    transition: background-color 0.3s;
+    background-color: #2a4d7e;
+}
+
+.fa-user {
+    font-size: x-large;
+    color: white;
+    margin-top: -60px;
+    margin-left: 50px;
+}
+
+/* Hide menu items on small screens */
+@media (max-width: 768px) {
+    .right-menu a {
+        display: none;
+    }
+
+    .fa-user {
+        color: #000000;
+    }
+}
+h1 {
+    font-size: 2rem;
+    font-family: 'Cambria', 'Times New Roman', serif;
+}
+
+/* Styles for the search container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-bar {
+    padding: 5px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Cambria', 'Times New Roman', serif;
+}
+
+#search-bar:hover{
+    transition: 0.4s;
+    border: 1px solid #464646;
+}
+
+#search-button {
+    background-color: #2f345c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #3e6293;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .logo {
+        margin: 0; /* Reset margin for smaller screens */
+    }
+
+    .right-menu {
+        flex-direction: column; /* Stack menu items on small screens */
+        margin-top: 10px; /* Add space between stacked menu items */
+    }
+}
+
+
+/* Styles for the navigation menu */
+nav {
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center; /* Center menu items horizontally */
+    align-items: center;
+    max-width: 1500px; /* Use max-width instead of fixed width */
+    margin: 0 auto; /* Center the menu horizontally */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px; /* Remove margin-left */
+    padding: 0; /* Add padding to remove default list padding */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav ul li {
+    margin-right: 20px; /* Reduce margin for smaller screens */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+    transition: font-size 0.3s;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+
+nav a:hover {
+    transition: 0.2s;
+    font-size: 1.35rem;
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 586px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items on small screens */
+        align-items: center; /* Center menu items vertically */
+    }
+    
+    nav ul li {
+        margin: 10px 0; /* Add space between stacked menu items */
+    }
+}
+/* Main container styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+
+  @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Hreyfum textann niður áður en hann hverfur. */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Síðan hreyfum textann upp og hann verður sýnilegur. */
+    }
+}
+
+  /* Product detail section styles */
+  .product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+    padding: 20px;
+    align-items: start;
+    margin: 20px;
+    margin-top: 100px;
+    animation: fadeUp 0.3s ease-in forwards;
+  }
+  
+  /* Product image styles */
+  .product-detail img {
+    max-width: 600px;
+    animation: fadeUp 0.3s ease-in forwards;
+    border-radius: 5px;
+  }
+  
+
+  @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Hreyfum textann niður áður en hann hverfur. */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Síðan hreyfum textann upp og hann verður sýnilegur. */
+    }
+  }
+  
+  /* Product info container */
+  .product-detail .product-info {
+    display: flex;
+    flex-direction: column;
+}  
+  /* Product title styles */
+  .product-detail h1 {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  
+  /* Product price styles */
+  .product-detail .price {
+    font-size: 28px;
+    color: #131525;
+    margin: 10px 0;
+    margin-top: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+  }
+  
+  /* "Add to Cart" button styles */
+  .product-detail .buy-button {
+    background-color: #181b2f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    margin-top: 50px;
+    transition: background-color 0.3s;
+  }
+  
+  .product-detail .buy-button:hover {
+    background-color: #2f435f;
+  }
+
+  .buy-button a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  
+  .size-buttons {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between buttons as needed */
+    margin-top: 3px;
+  }
+  
+  .size-radio {
+    display: none; /* Hide the radio buttons */
+  }
+  
+  .size-label {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #d6d6d6;
+    border-radius: 2.5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .size-radio:checked + .size-label {
+    background-color: #e9ebee;
+    border-color: #919191;
+    font-weight: bold;
+  }
+  
+  .size-label:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
+  
+  
+  /* Product description styles */
+  .product-detail p {
+    font-size: 16px;
+    margin-top: 30px 
+  }
+  
+  /* Size and material information styles */
+  .product-detail p:nth-child(4),
+  .product-detail p:nth-child(5) {
+    font-weight: bold;
+  }
+  
+  /* Add some margin to the last paragraph */
+  .product-detail p:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+/* Hide the scrollbar track */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width as needed */
+  }
+  
+  /* Style the scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: transparent; /* Set the thumb color to transparent */
+    border-radius: 5px; /* Add rounded corners if desired */
+  }
+  
+  /* Style the scrollbar track when hovered */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2); /* Change the background on hover */
+  }
+
+@media (max-width: 768px){
+    .product-detail img{
+        max-width: 300px;
+    }
+    .product-info{
+        font-size: 12px;
+    }
+    .product-detail h1{
+        font-size: 17px;
+    }
+    .product-detail .price{
+        font-size: 16px;
+    }
+    .product-detail .buy-button{
+        font-size: 16px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 200px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .product {
+        margin: 0.5rem 0;
+    }
+}
